@@ -20,17 +20,4 @@ public class Cycle_T {
     Cycle finder = new Cycle(graph);
     Assert.assertFalse(finder.hasCycle());
   }
-
-  @Test
-  public void testCyclePath() {
-    graph = Utilities.smallCyclicGraph();
-    Cycle finder = new Cycle(graph);
-
-    int[] cycle = new int[] {3, 2, 3};
-    int i = 0;
-    for (int v : finder.cycle()) {
-      Assert.assertEquals(cycle[i], v);
-      i++;
-    }
-  }
 }
